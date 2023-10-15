@@ -1,0 +1,55 @@
+{% extends "base.html"%}
+{% block title%}Home{% endblock %}
+{% block content%}
+
+<html>
+
+<head>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url("{{url_for('static',filename='images/photo.png.jpeg')}}");
+        }
+    </style>
+</head>
+
+<body>
+    
+    <center>
+        <br>
+        <h1 style="color:rgb(20, 3, 3);font-size:40px;">Enter your contact information</h1><br><br>
+        <table>
+            <form method="POST">
+                <tr>
+                    <td><br><label for="name">Name</label>
+                        <input name="Name" , placeholder="Name"> <br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><label for="name">Age</label>
+                        <input name="Age" , placeholder="Age"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><label for="name">Dept</label>
+                        <input name="Dept" , placeholder="Dept"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><label for="name">City</label>
+                        <input name="City" , placeholder="City"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><input type="submit" value="Register"><br><br></td>
+                </tr>
+            </form>
+        </table>
+    </center>
+
+</body>
+
+</html>
+{% endblock%}

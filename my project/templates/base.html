@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title%}project{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+    <link rel="stylesheet" href="css/base.css">
+
+
+    <!-- <script type = "text/javascript" 
+        src = "{{ url_for('static', filename = 'hello.js') }}" >
+</script> -->
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="home">Home</a>
+        <a href="admission">Admission</a>
+        <a href="showdata">show data</a>
+        <a href="aboutus">About us</a>
+    </div>
+    <div style="padding-left:16px">
+        <p>{% block content %}{% endblock %}</p>
+    </div>
+
+</body>
+
+</html>

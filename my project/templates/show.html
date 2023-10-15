@@ -1,0 +1,26 @@
+{% block title%}<center><h1>show data</h1></center>{% endblock %}
+{% block content%}
+<center>
+<html>
+<body>
+<h2> Registered Students Information </h2> 
+<table border="1" width="50%" height="35%">
+    <tr style="background-color: rgb(243, 242, 204);">
+    <th>Name</th><th>Age</th><th>Dept</th><th>City</th>
+    </tr>
+        {% for data in data %}
+    <tr>
+        <td align="center">{{ data.Name}}</td><td align="center"> {{ data.Age }}</td><td align="center"> {{ data.Dept }}</td><td align="center"> {{ data.City }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+<center>
+
+    <a href="home"><h3>Click here for Home page</h3></a><br/>
+
+    <a href="aboutus"><h3>Click here for About us page</h3></a><br/>
+</center>
+</body>
+</html>
+    {% endblock %}
